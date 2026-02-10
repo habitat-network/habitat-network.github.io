@@ -1,0 +1,233 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main App Container */
+.app {
+    background: white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 0 2rem;
+}
+
+/* Background Container */
+.background-container {
+    position: absolute;
+    background: #f9fff2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+}
+
+/* Animated Blobs */
+.blob {
+    position: absolute;
+    background: #caed9f;
+    filter: blur(80px);
+    opacity: 0.3;
+    border-radius: 9999px;
+}
+
+.blob-1 {
+    width: min(377px, 40vw);
+    height: min(377px, 40vw);
+    animation: blob 12s infinite cubic-bezier(0.4, 0.0, 0.6, 1);
+    animation-delay: 0s;
+    left: 10%;
+    top: 20%;
+}
+
+.blob-2 {
+    width: min(529px, 50vw);
+    height: min(529px, 50vw);
+    animation: blob 12s infinite cubic-bezier(0.4, 0.0, 0.6, 1);
+    animation-delay: 2s;
+    left: 40%;
+    top: 15%;
+}
+
+.blob-3 {
+    width: min(385px, 35vw);
+    height: min(385px, 35vw);
+    animation: blob 12s infinite cubic-bezier(0.4, 0.0, 0.6, 1);
+    animation-delay: 4s;
+    right: 10%;
+    top: 35%;
+}
+
+@keyframes blob {
+
+    0%,
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+        transform: translate(min(150px, 15vw), min(-120px, -12vh)) scale(1.4);
+    }
+
+    66% {
+        transform: translate(min(-120px, -12vw), min(100px, 10vh)) scale(0.6);
+    }
+}
+
+/* Main Content - Centered Container */
+.main-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    gap: 0;
+}
+
+/* Heading Section */
+.heading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+.group {
+    position: relative;
+    display: inline-block;
+    font-size: clamp(4rem, 12vw, 12rem);
+}
+
+.habitat-text {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    color: #180c00;
+    font-size: inherit;
+    letter-spacing: -0.073em;
+    margin: 0;
+    padding-left: 0.42em;
+    position: relative;
+}
+
+/* Leaf Icon */
+.leaf-icon {
+    position: absolute;
+    left: 0;
+    top: 0.43em;
+    width: 0.42em;
+    height: 0.42em;
+}
+
+.leaf-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Germinating Text */
+.germinating-text {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: black;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    margin: 0;
+    text-align: right;
+    margin-left: clamp(1rem, 8vw, 8rem);
+}
+
+/* Dot Animations */
+@keyframes dot-fade {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.dot-1 {
+    animation: dot-fade 1.5s infinite;
+    animation-delay: 0s;
+}
+
+.dot-2 {
+    animation: dot-fade 1.5s infinite;
+    animation-delay: 0.3s;
+}
+
+.dot-3 {
+    animation: dot-fade 1.5s infinite;
+    animation-delay: 0.6s;
+}
+
+/* Social Icons */
+.social-icons {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    z-index: 10;
+}
+
+.social-link {
+    color: #1B3314;
+    opacity: 0.8;
+    transition: all 300ms;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.social-link svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.social-link:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .app {
+        padding: 0 2rem;
+    }
+
+    .social-icons {
+        gap: 1.5rem;
+        bottom: 2rem;
+    }
+}
