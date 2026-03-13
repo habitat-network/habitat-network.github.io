@@ -7,63 +7,148 @@
     <title>habitat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500&family=Lora:ital@1&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icons/habitat.png" type="image/png">
 </head>
 
 <body>
-    <div class="app" data-name="Create simple landing page">
-        <!-- Background Container -->
-        <div class="background-container" data-name="Container">
-            <div class="blob blob-1" data-name="Container"></div>
-            <div class="blob blob-2" data-name="Container"></div>
-            <div class="blob blob-3" data-name="Container"></div>
+    <div class="app">
+
+        <!-- Background -->
+        <div class="background-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="dot-grid"></div>
         </div>
 
-        <!-- Main Content - Centered -->
-        <div class="main-content">
-            <!-- Heading with Leaf Icon -->
-            <div class="heading" data-name="Heading 1">
-                <div class="group">
-                    <div class="leaf-icon" data-name="Leaf Icon">
-                        <svg class="leaf-svg" fill="none" preserveAspectRatio="none" viewBox="0 0 80 80">
-                            <g id="Leaf Icon">
-                                <path d="M80 24C80 37.2548 69.2548 48 56 48H40V24C40 19.5817 43.5817 16 48 16H80V24Z"
-                                    fill="#2A7047" id="Intersect" />
-                                <path
-                                    d="M32 80H24V48C24 43.5817 20.4183 40 16 40H8C3.58172 40 0 36.4183 0 32V0H8C21.2548 0 32 10.7452 32 24V80Z"
-                                    fill="#2A7047" id="Union" />
-                            </g>
-                        </svg>
-                    </div>
-                    <p class="habitat-text">habitat</p>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <svg fill="none" viewBox="0 0 80 80" width="100%" height="100%">
+                        <path d="M80 24C80 37.2548 69.2548 48 56 48H40V24C40 19.5817 43.5817 16 48 16H80V24Z"
+                            fill="#2A7047" />
+                        <path
+                            d="M32 80H24V48C24 43.5817 20.4183 40 16 40H8C3.58172 40 0 36.4183 0 32V0H8C21.2548 0 32 10.7452 32 24V80Z"
+                            fill="#2A7047" />
+                    </svg>
                 </div>
+                <span class="nav-title">habitat</span>
             </div>
 
-            <!-- Germinating Text -->
-            <p class="germinating-text">
-                germinating<span class="dot-1">.</span><span class="dot-2">.</span><span class="dot-3">.</span>
-            </p>
-        </div>
+            <div class="nav-links">
+                <a href="users.html" class="nav-link">for users</a>
+                <a href="developers.html" class="nav-link">for developers</a>
+            </div>
+        </nav>
 
-        <!-- Social Icons -->
-        <div class="social-icons">
-            <a href="https://bsky.app/profile/habitat.network" target="_blank" rel="noopener noreferrer"
-                class="social-link" aria-label="Bluesky">
-                <img src="icons/bluesky_black.svg" alt="Bluesky logo" width="25" style="opacity: 0.3;">
-            </a>
-            <a href="https://github.com/habitat-network/habitat" target="_blank" rel="noopener noreferrer"
-                class="social-link" aria-label="GitHub">
-                <img src="icons/github.svg" alt="Github logo" width="25" style="opacity: 0.3;">
-            </a>
-            <a href="https://habitat.leaflet.pub" target="_blank" rel="noopener noreferrer" class="social-link"
-                aria-label="Leaflet.pub">
-                <img src="icons/leaflet.svg" alt="Leaflet logo" width="25" style="opacity: 0.3;">
-            </a>
-        </div>
+        <!-- Hero -->
+        <main class="hero">
+            <div class="hero-inner">
+                <h1 class="hero-headline">
+                    We're building <b>user data agency</b> on the web.<br>
+                </h1>
+            </div>
+        </main>
+
+        <!-- Section 2  -->
+        <section class="content-section content-section-mid">
+            <div class="content-section-inner">
+                <h2 class="section-headline">We're tired of our data being harvested, stolen, and used against us by Big
+                    Tech.</h2>
+
+                <div class="carousel">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg>
+                    </button>
+                    <div class="carousel-track-wrapper">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="imgs/google.png" alt="Google" class="carousel-img">
+                            </div>
+                            <div class="carousel-slide"><img src="imgs/grammarly.png" alt="Grammarly"
+                                    class="carousel-img"></div>
+                            <div class="carousel-slide"><img src="imgs/ring.png" alt="Ring" class="carousel-img"></div>
+                        </div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="content-section content-section-alt">
+            <div class="content-section-inner">
+                <h2 class="section-headline">Take back control of your data with habitat, now in testing. Built on
+                    <a href="https://atprotocol.com">ATProtocol</a>.
+                </h2>
+                <ul class="section-list">
+                    <li>↪ Own your <a href="/habitat/docs">docs.</a></li>
+                    <li>↪ Own your <a href="/habitat/calendar">calendar.</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="https://bsky.app/profile/habitat.network" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Bluesky">
+                    <img src="icons/bluesky_black.svg" alt="Bluesky" width="20">
+                </a>
+                <a href="https://github.com/habitat-network/habitat" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="GitHub">
+                    <img src="icons/github.svg" alt="GitHub" width="20">
+                </a>
+                <a href="https://habitat.leaflet.pub" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="Leaflet.pub">
+                    <img src="icons/leaflet.svg" alt="Leaflet" width="20">
+                </a>
+            </div>
+        </footer>
+
     </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let current = 0;
+        const total = 3;
+        let timer;
+
+        function goTo(index) {
+            current = (index + total) % total;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        function startTimer() {
+            clearInterval(timer);
+            timer = setInterval(() => goTo(current + 1), 4000);
+        }
+
+        document.querySelector('.carousel-arrow-left').addEventListener('click', () => { goTo(current - 1); startTimer(); });
+        document.querySelector('.carousel-arrow-right').addEventListener('click', () => { goTo(current + 1); startTimer(); });
+        dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+        startTimer();
+    </script>
 </body>
 
 </html>
